@@ -10,17 +10,54 @@ main {
     padding: 100px;
 }
 
+
+
+
+
+
+/* stilizzazione header */
+header {
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 16px 100px
+
+}
+
+header #logo img {
+    height: 40px;
+}
+
+
+header ul {
+    display: flex;
+    /* gap: proprietà da dare al GENITORE flex, aggiunge dello spazio minimo tra un elemento e l'altro */
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+
+    list-style-type: none;
+}
+
+
+
+/* fine stilizzazione header */
+
+
+
+
 .flex-container {
 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* flex-wrap: wrap; */
 
     /* questa regola distribuisce gli elementi sull'asse PRINCIPALE */
     justify-content: center;
 
     /* distribuisce gli elementi (tutti insieme) sull'asse TRASVERSALE */
-    align-items: flex-start;
+    align-items: baseline;
 
     height: 500px;
 
@@ -32,8 +69,15 @@ main {
 
 
 .square {
+    /* flex basis va dato al figlio */
+    flex-basis: 60%;
 
-    width: 100px;
+    /* permette ad un elemento figlio di un genitore flex di crescere per il fattore indicato */
+    /* flex-grow: 1; */
+
+    /* permette ad un elemento figlio di un genitore flex di stringersi in base al fattore indicato */
+
+    /* min-width: 100px; */
     min-height: 100px;
 }
 
